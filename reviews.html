@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reviews — Les Petits Courts</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-
 <body>
   <!-- HEADER -->
   <header>
     <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">Les Petits Courts</a>
-      </div>
+      <div class="logo"><a href="index.html">Les Petits Courts</a></div>
       <button class="burger" id="burger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Asso</a></li>
@@ -36,9 +31,9 @@
       <p>Quelques retours inspirants de spectateurs passionnés 🎥</p>
 
       <div class="carousel">
-        <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
-        
-        <div class="carousel-track">
+        <button class="carousel-btn prev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+
+        <div class="carousel-track" id="carouselTrack">
           <div class="review-card">
             <h3>🎬 Léa</h3>
             <p>“Une sélection inspirante et variée. Chaque court a sa propre émotion.”</p>
@@ -55,9 +50,10 @@
             <h3>🎞️ Sofia</h3>
             <p>“De belles découvertes, un esprit nouvelle vague bien présent.”</p>
           </div>
+          <!-- tu peux ajouter d'autres .review-card ici -->
         </div>
 
-        <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="carousel-btn next" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
     </section>
   </main>
@@ -77,28 +73,103 @@
 
   <!-- JS -->
   <script>
-    // Burger menu
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-    burger.addEventListener('click', () => {
-      burger.classList.toggle('active');
-      navLinks.classList.toggle('show');
+  // ===== Burger menu (identique) =====
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  burger && burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('show');
+  });
+
+  // ===== Carousel robuste =====
+  (function() {
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    if (!track) return;
+
+    const cards = Array.from(track.querySelectorAll('.review-card'));
+
+    // calcule la largeur effective d'un card (incl. gap)
+    function getStep() {
+      const card = cards[0];
+      if (!card) return 300;
+      const style = window.getComputedStyle(track);
+      // récupérer gap (si défini en CSS via gap)
+      let gap = parseInt(style.getPropertyValue('gap')) || 20;
+      // largeur du card (offsetWidth incl. padding & border)
+      return card.offsetWidth + gap;
+    }
+
+    // navigation boutons
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    });
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -getStep(), behavior: 'smooth' });
     });
 
-    // Carousel
-    const track = document.querySelector('.carousel-track');
-    const prev = document.querySelector('.prev');
-    const next = document.querySelector('.next');
-
-    let scrollAmount = 0;
-    const scrollStep = 300;
-
-    next.addEventListener('click', () => {
-      track.scrollBy({ left: scrollStep, behavior: 'smooth' });
+    // drag to scroll (pour mobile)
+    let isDown = false, startX, scrollLeft;
+    track.addEventListener('pointerdown', (e) => {
+      isDown = true;
+      track.classList.add('dragging');
+      startX = e.clientX;
+      scrollLeft = track.scrollLeft;
+      track.setPointerCapture(e.pointerId);
     });
-    prev.addEventListener('click', () => {
-      track.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+    track.addEventListener('pointermove', (e) => {
+      if (!isDown) return;
+      const x = e.clientX;
+      const walk = startX - x;
+      track.scrollLeft = scrollLeft + walk;
     });
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+    function endDrag(e) {
+      isDown = false;
+      track.classList.remove('dragging');
+      try { track.releasePointerCapture(e.pointerId); } catch(e){ }
+      // snap to nearest card after drag end
+      snapToClosest();
+    }
+
+    // snap fonction pour aligner proprement la card la plus proche
+    function snapToClosest() {
+      const step = getStep();
+      const pos = track.scrollLeft;
+      const index = Math.round(pos / step);
+      const target = index * step;
+      track.scrollTo({ left: target, behavior: 'smooth' });
+    }
+
+    // clavier (gauche/droite)
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextBtn.click();
+      if (e.key === 'ArrowLeft') prevBtn.click();
+    });
+
+    // option : autoplay (désactivée par défaut) — décommente pour activer
+    /*
+    let autoplayInterval = 5000; // ms
+    let autoplayId = setInterval(() => {
+      track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    }, autoplayInterval);
+    // pause autoplay on hover
+    track.addEventListener('mouseenter', () => clearInterval(autoplayId));
+    track.addEventListener('mouseleave', () => {
+      autoplayId = setInterval(() => {
+        track.scrollBy({ left: getStep(), behavior: 'smooth' });
+      }, autoplayInterval);
+    });
+    */
+
+    // ensure responsive recalculation on resize
+    window.addEventListener('resize', () => {
+      // optional: snap after resize to keep alignment
+      setTimeout(snapToClosest, 200);
+    });
+  })();
   </script>
 </body>
 </html>
