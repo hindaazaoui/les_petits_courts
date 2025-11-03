@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Asso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Les Petits Courts</a>
+    </div>
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Asso</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="fifib.html">Recap FIFIB</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+    <main>
+        <section>
+            <h1>Bienvenue sur le site des petits courts</h1>
+            <p>Nous sommes une association dédiée aux cinéma</p>
+        </section>
+
+        <section>
+            <h2>Nos activités</h2>
+            <p>Les Petits Courts : l’association cinéma de Sciences Po Bordeaux pour tous les étudiants!
+
+Ouverte à tous les étudiants du campus bordelais. Que tu sois passionné·e de films, curieux·se de l’audiovisuel ou simplement à la recherche d’activités culturelles, tu trouveras ta place parmi nous !
+
+Chaque mercredi, nous proposons des séances cinéma originales : projections de films dans des appartements, sorties au cinéma, ateliers d’initiation à la prise de vue, au son et au montage vidéo. Il y en a pour tous les goûts et tous les niveaux !
+
+Aucune connaissance préalable n’est requise pour rejoindre Les Petits Courts. Tu n’as besoin d’aucun prérequis, ni d’avoir vu certains films : seul compte ton intérêt pour le cinéma et la création audiovisuelle, et l’envie de partager de bons moments autour de la culture et de la création.
+
+Rejoins-nous pour découvrir le monde de l’audiovisuel, rencontrer d’autres étudiants passionnés et vivre des expériences cinématographiques uniques à Sciences Po Bordeaux !</p>
+        </section>
+    </main>
+
+  <footer>
+    <p>&copy; 2025 Les Petits Courts</p>
+    <div class="footer-icons">
+        <a href="https://www.instagram.com/petitscourts/" target="_blank" class="footer-icon insta">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://chat.whatsapp.com/GYAkKG22H8D3tiCBNPi1OW" target="_blank" class="footer-icon whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+</footer>
+<script>
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  navLinks.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recap FIFIB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Les Petits Courts</a>
+    </div>
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Asso</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="fifib.html">Recap FIFIB</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+    <main>
+        <section>
+            <h1>Récapitulatif du FIFIB</h1>
+            <p>Voici un résumé des moments forts du FIFIB :</p>
+            <ul>
+                <li>Jour 1 : [activités]</li>
+                <li>Jour 2 : [activités]</li>
+                <li>Jour 3 : [activités]</li>
+            </ul>
+        </section>
+    </main>
+
+ <footer>
+    <p>&copy; 2025 Les Petits Courts</p>
+    <div class="footer-icons">
+        <a href="https://www.instagram.com/petitscourts/" target="_blank" class="footer-icon insta">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://chat.whatsapp.com/GYAkKG22H8D3tiCBNPi1OW" target="_blank" class="footer-icon whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+</footer>
+<script>
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  navLinks.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>
