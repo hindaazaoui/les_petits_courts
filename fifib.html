@@ -1,66 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recap FIFIB</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos critiques – FIFIB</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;900&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html">Les Petits Courts</a>
-    </div>
-    <button class="burger" id="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Asso</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
-      <li><a href="fifib.html">Recap FIFIB</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Les Petits Courts</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Asso</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="fifib.html">Recap FIFIB</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <section class="reviews-simple">
+      <h1>Nos critiques du FIFIB</h1>
 
-    <main>
-        <section>
-            <h1>Récapitulatif du FIFIB</h1>
-            <p>Voici un résumé des moments forts du FIFIB :</p>
-            <ul>
-                <li>Jour 1 : [activités]</li>
-                <li>Jour 2 : [activités]</li>
-                <li>Jour 3 : [activités]</li>
-            </ul>
-        </section>
-    </main>
+      <article class="review">
+        <h2>The Chronology of Water</h2>
+        <p class="auteur">par Romance Henri-Dubernet</p>
+        <p>Regarder <em>The Chronology of Water</em>, c’est être plongé·e dans un flux poétique où le corps et la mémoire se confondent. Une œuvre d’une intensité rare, magnifiée par une mise en scène sensorielle.</p>
+      </article>
 
- <footer>
-    <p>&copy; 2025 Les Petits Courts</p>
+      <article class="review">
+        <h2>On the Silver Globe</h2>
+        <p class="auteur">par Jules Tardy</p>
+        <p>Un voyage métaphysique aux frontières du cinéma et du rêve. Żuławski questionne l’humanité dans une fresque cosmique à la beauté radicale et troublante.</p>
+      </article>
+
+      <article class="review">
+        <h2>May December</h2>
+        <p class="auteur">par Sarah Lemoine</p>
+        <p>Todd Haynes orchestre un duel d’actrices d’une précision chirurgicale. Un film brillant sur la mise en scène de soi et les zones grises de la morale.</p>
+      </article>
+       <article class="review">
+        <h2>May December</h2>
+        <p class="auteur">par Sarah Lemoine</p>
+        <p>Todd Haynes orchestre un duel d’actrices d’une précision chirurgicale. Un film brillant sur la mise en scène de soi et les zones grises de la morale.</p>
+      </article>
+       <article class="review">
+        <h2>May December</h2>
+        <p class="auteur">par Sarah Lemoine</p>
+        <p>Todd Haynes orchestre un duel d’actrices d’une précision chirurgicale. Un film brillant sur la mise en scène de soi et les zones grises de la morale.</p>
+      </article>
+       <article class="review">
+        <h2>May December</h2>
+        <p class="auteur">par Sarah Lemoine</p>
+        <p>Todd Haynes orchestre un duel d’actrices d’une précision chirurgicale. Un film brillant sur la mise en scène de soi et les zones grises de la morale.</p>
+      </article>
+       <article class="review">
+        <h2>May December</h2>
+        <p class="auteur">par Sarah Lemoine</p>
+        <p>Todd Haynes orchestre un duel d’actrices d’une précision chirurgicale. Un film brillant sur la mise en scène de soi et les zones grises de la morale.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 CinéRegards — Tous droits réservés</p>
     <div class="footer-icons">
-        <a href="https://www.instagram.com/petitscourts/" target="_blank" class="footer-icon insta">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://chat.whatsapp.com/GYAkKG22H8D3tiCBNPi1OW" target="_blank" class="footer-icon whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
+      <a href="#" class="footer-icon insta"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="footer-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
     </div>
-</footer>
-<script>
-const burger = document.getElementById('burger');
-const navLinks = document.getElementById('nav-links');
+  </footer>
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('active');
-  navLinks.classList.toggle('show');
-});
-</script>
-
+  <script src="https://kit.fontawesome.com/a2e0e6ad5c.js" crossorigin="anonymous"></script>
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      burger.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
+
