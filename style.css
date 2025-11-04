@@ -304,87 +304,6 @@ html {
   }
 }
 
-/* --- PAGE REVIEWS / CARROUSEL --- */
-.reviews-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.reviews-carousel {
-  position: relative;
-  overflow: hidden;
-  margin-top: 40px;
-}
-
-.reviews-track {
-  display: flex;
-  transition: transform 0.6s ease;
-}
-
-.review-card {
-  flex: 0 0 100%;
-  background-color: var(--blanc);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  padding: 40px;
-  text-align: left;
-  margin: 0 20px;
-}
-
-.review-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: var(--bleu);
-  margin-bottom: 10px;
-}
-
-.review-card p {
-  font-size: 1.1rem;
-  color: var(--gris-fonce);
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--bleu);
-  color: var(--blanc);
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  font-size: 1.2rem;
-}
-
-.carousel-btn:hover {
-  background-color: var(--rouge);
-  transform: scale(1.1);
-}
-
-.carousel-btn.prev {
-  left: 20px;
-}
-
-.carousel-btn.next {
-  right: 20px;
-}
-
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .review-card {
-    padding: 25px;
-    margin: 0 10px;
-  }
-
-  .carousel-btn {
-    width: 38px;
-    height: 38px;
-    font-size: 1rem;
-  }
-}
 
 /* styles.css - affichage constant */
 :root{
@@ -448,3 +367,30 @@ html {
     flex: 1;
   }
 }
+/* Style général du section */
+section {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9; /* léger gris clair */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+/* Style du titre */
+section h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Style du paragraphe */
+section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+

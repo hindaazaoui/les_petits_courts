@@ -1,0 +1,34 @@
+/* Style général du section */
+section {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9; /* léger gris clair */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+/* Style du titre */
+section h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Style du paragraphe */
+section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Style de l'image */
+section img {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 100%;
+  height: auto;
+}
