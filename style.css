@@ -466,3 +466,6 @@ a {
   text-decoration: none;
   color: inherit; /* pour garder la couleur du texte normal */
 }
+section p {
+    text-align: justify;
+}
