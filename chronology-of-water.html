@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Chronology of Water – Romance Henri-Dubernet</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">Les Petits Courts</a></div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Asso</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="fifib.html">Recap FIFIB</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="review-detail">
+      <h1>The Chronology of Water</h1>
+      <p class="auteur">par Romance Henri-Dubernet</p>
+      <img class="poster" src="https://fr.web.img6.acsta.net/img/15/76/1576dfc4f0eb2b3a34246f83343b2582.jpg" alt="Affiche — The Chronology of Water" />
+
+      <p>Regarder The Chronology of Water, c’est être plongé•e dans une succession de scènes de vie — de mort, souvent — fracturée. Plongé•e dans la mémoire de Lidia Yuknavitch. Car c’est de ça que sont faits les souvenirs. Infusés d’émotions, d’impressions, de troubles. Et quand ils sont marqués par le traumatisme, d’omissions. D’oublis pour se protéger de la réalité. La réalisatrice donne la part large au hors champ, ce qui ne fait qu’accentuer l’horreur. La tension ne se relâche jamais et le visionnage a pour moi été éprouvant.</p>
+
+      <p>Du côté esthétique, le choix du 16mm rend les contours volontairement noircis et l’image granuleuse. Les couleurs sont vibrantes, tranchantes dans l’ignominie. Malgré la narration brute, le montage est méticuleusement travaillé, rendant le film d’autant plus déstabilisant couplé à la narration de Lidia Yuknavitch, souvent chuchotante et saccadée. La réalisation joue très bien avec les limites du médium, jouant sur la spécialisation du son dans la salle et les visuels. C’est cette partie sensorielle qui ajoute le plus à l’intensité.</p>
+
+      <p>The Chronology of Water porte bien son nom. L’eau à travers chaque fluide, qu’importe leur nature, corporels ou naturels. De la piscine avec la natation comme moyen de s’éloigner des abus, jusqu’à la catharsis offerte par le flot de l’écriture. L’art qui transforme la douleur et le chaos des traumatismes pour enfin les supporter sans les effacer, pour se reconstruire après les abus, les excès et la violence.</p>
+
+      <p>En définitive, même si le film comporte quelques longueurs, sa réalisation est unique. Pour un premier long métrage, Kristen Stewart frappe définitivement fort. Brutal, poétique et abrupt, ce film n’est pas à recommander à n’importe qui.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Les Petits Courts — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      burger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

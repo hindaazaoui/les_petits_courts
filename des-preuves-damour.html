@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Des preuves d’amour – Emma Lysimaque</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">Les Petits Courts</a></div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Asso</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="fifib.html">Recap FIFIB</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="review-detail">
+      <h1>Des preuves d’amour</h1>
+      <p class="auteur">par Emma Lysimaque</p>
+      <img class="poster" src="https://fr.web.img6.acsta.net/img/9d/1d/9d1dd4088d46af98631f2a23f2c74fbb.jpg" alt="Affiche — Des preuves d’amour" />
+
+      <p>C’est un film à la fois touchant, instructif et avec une pointe d’humour. Il raconte l’histoire d’un couple de femmes et leur parcours de PMA. On suit la grossesse de l’une d’elles, ainsi que les démarches que l’autre doit accomplir pour adopter l’enfant. Le film est particulièrement intéressant car il permet de mieux comprendre les termes et les enjeux de la PMA, ainsi que les « preuves d’amour » que le juge peut demander. Mais il aborde également le regard de la société sur leur situation. Même si ce sujet peut sembler éloigné pour certains, la réalisatrice réussit à nous y plonger pleinement et à nous faire ressentir les émotions des deux femmes.</p>
+
+      <p>Un long métrage émouvant et instructif que je recommande vivement !</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Les Petits Courts — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      burger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte Blanche Lola Maupas – Léane Cottencin</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">Les Petits Courts</a></div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Asso</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="fifib.html">Recap FIFIB</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="review-detail">
+      <h1>Carte Blanche Lola Maupas – Introduction to the End of an Argument</h1>
+      <p class="auteur">par Léane Cottencin</p>
+      <img class="poster" src="https://m.media-amazon.com/images/M/MV5BOWU4OGVjZGUtMmE5MS00OWFkLWE2MDMtODMyODRlMDhiZmNjXkEyXkFqcGc@._V1_.jpg" alt="Affiche — Introduction to the End of an Argument" />
+
+      <p>Une programmation de courts-métrages époustouflante ! La chercheuse franco-libanaise Lola Maupas nous invite dans les traces d’un cinéma balbutiant et encore trop invisibilisé : le cinéma palestinien. Déconstruisant les clichés et questionnant les rapports de domination entre mondes arabes et occidentaux, cette compilation, des origines de la Palestine jusqu’à nos jours, permet d’explorer un panel riche de films très divers.</p>
+
+      <p>Le premier <em>Scènes from an occupation in Gaza</em> constitue les ébauches d’un cinéma riche en mise en scène bien que les images soient tournées par les militaires israéliens. Le spectateur peut ainsi découvrir « l’autre coté » et expérimenter les clivages profonds. Le deuxième <em>Introduction to the end of an argument</em> compile tous les plus grands moments d’Hollywood, de Lawrence d’Arabie en passant par les Westerns ou les Looney Tunes, il établit un fait : le traitement de l’image de la culture palestinienne est plus que faussé. Enfin, le troisième court-métrage <em>Videotracts for Palestine</em> incarne la violence du conflit actuel qui sévit en Palestine, partagée grâce aux nouveaux médias : les réseaux sociaux. Les échanges avec la chercheuse éclairent cette frontière géographique et culturelle qui entoure la Palestine, point d’orgue d’un conflit sans fin.</p>
+
+      <p>1 h 30 de réflexion profonde !</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Les Petits Courts — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      burger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

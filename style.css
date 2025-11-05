@@ -394,3 +394,7 @@ section p {
   line-height: 1.5;
 }
 
+.review .poster {
+  display: block;       /* nécessaire pour que margin auto fonctionne */
+  margin: 0 auto;       /* centre horizontalement */
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roqia – Arthur Bijac</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">Les Petits Courts</a></div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Asso</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="fifib.html">Recap FIFIB</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="review-detail">
+      <h1>Roqia</h1>
+      <p class="auteur">par Arthur Bijac</p>
+      <img class="poster" src="https://medias.unifrance.org/medias/46/152/301102/format_page/roqia.jpg" alt="Affiche — Roqia" />
+
+      <p>Tourné principalement caméra à l’épaule, Roqia nous plonge dans une horreur ultra réaliste, un peu façon Projet Blair Witch. Très sombre, très anxiogène. Une ambiance immersive qui rend les scènes de gore et d’exorcisme insoutenables à regarder. Derrière cette expérience spectateur violente, une question nous hante : comment peut-on tuer avec une telle violence ?</p>
+
+      <p>Quand le film s’ouvre sur un tel massacre nocturne qui nous glace le sang — lumière éteinte, cris, égorgements, éventrement — on comprend que l’humain qui commet l’inhumain ne peut être autre qu’un démon. Une idée qui permet de traiter la question du fondamentalisme religieux en Algérie avec les codes de l’horreur paranormale, sans réellement en parler explicitement. Entre le malaise sensoriel qu’instaure le film et la lecture politique qu’on peut en faire, il est difficile de rester indifférent devant Roqia. Difficile aussi de vouloir revenir pour un deuxième visionnage...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Les Petits Courts — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      burger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

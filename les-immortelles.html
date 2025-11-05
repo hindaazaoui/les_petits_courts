@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Immortelles – Lisa Bouttier</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">Les Petits Courts</a></div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Asso</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="fifib.html">Recap FIFIB</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="review-detail">
+      <h1>Les Immortelles</h1>
+      <p class="auteur">par Lisa Bouttier</p>
+      <img class="poster" src="https://www.fifib.com/storage/wsm_medias/vignettefilm_o_1j3o08gse1odiue6kll4il7fhb.png" alt="Affiche — Les Immortelles" />
+
+      <p>Dans ce second long métrage, Caroline Deruas met en scène une part d’elle-même en dirigeant sa fille, Léna Garrel, dont le personnage principal apparaît comme le double fictionnel de la réalisatrice. Une BO des Rita Mitsouko, les couleurs chatoyantes des années 90 et l’air chaud de la Méditerranée.</p>
+
+      <p>Deux meilleures amies discutent au téléphone jusqu’à pas d’heure, se racontent les gossips du lycée et passent leurs après-midis à chanter et à faire de la musique. Le temps de l’insouciance, bientôt brisé par l’indicible violence. Changement de décor, place à la souffrance. Les couleurs autrefois édulcorées sont maintenant trop vives, elles sont comme des accords dissonants qui déchirent la mélodie de l’innocence. Elles rappellent que le mal est fait.</p>
+
+      <p>Seule issue : se murer dans un monde imaginaire où l’onirisme règne en maître. Ici, on se sent plus légère, plus forte et surtout plus proche de celle pour qui on aurait pu donner sa vie, avant que cette dernière ne l’arrache. Alternant entre humour, candeur, drame et nostalgie, Les Immortelles montre avec puissance que certaines amitiés restent éternelles, même quand tout semble les séparer.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Les Petits Courts — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      burger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra voz de tierra, memoria y futuro – Gonzalo Molina</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">Les Petits Courts</a></div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Asso</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="fifib.html">Recap FIFIB</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="review-detail">
+      <h1>Nuestra voz de tierra, memoria y futuro</h1>
+      <p class="auteur">par Gonzalo Molina</p>
+      <img class="poster" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT4gJKxXzNQrRLKgW6koQtrRkY517QrTxsVg&s" alt="Affiche — Nuestra voz de tierra, memoria y futuro" />
+
+      <p>Ce documentaire parle de l’histoire de l’humanité : le faible contre le fort, le pauvre contre le riche, l’opprimé contre l’oppresseur, en définitive le bien contre le mal. La terre a été l’une des principales causes de conflits tout au long de l’histoire, mais aussi une source d’espérance et de mémoire. Et comme pour tout ce à quoi l’on attribue une valeur sentimentale ou symbolique, il existera toujours des personnes prêtes à tout pour en tirer un profit économique, même s’il faut pour cela pactiser avec le diable.</p>
+
+      <p>Le documentaire nous fait plonger dans un monde réaliste et métaphysique où la lutte des paysans du peuple Coconuco, situé dans le sud de la Colombie, contre les propriétaires terriens étrangers s’entrelace avec les relations obscures entre un homme d’affaires et le diable personnifié. Les paysans, vivant sous la domination coloniale des entrepreneurs et d’un État qui favorise les grands propriétaires, partagent leur lutte à travers plusieurs générations cherchant à récupérer leur terre et leur mémoire.</p>
+
+      <p>Il est très inspirant de voir comment les paysans indigènes, relégués à une vie sans accès à l’éducation et isolés d’une société qui se développe à leurs dépens, développent spontanément un sentiment anarchiste et antisystème. Le manque d’opportunités pour construire leur avenir, ainsi que les conditions de vie difficiles, ont provoqué une grande volonté intérieure de se battre et de s’organiser pour vaincre l’ennemi, en l’occurrence le diable lui-même et ses acolytes, les colonisateurs. Le peuple Coconuco sert d’exemple universel de résilience et de volonté d’améliorer nos conditions de vie et celles des autres.</p>
+
+      <p>Tout au long du documentaire, on peut entendre les paysans expliquer et critiquer leur situation en accusant les entrepreneurs étrangers d’avoir envahi leurs terres ainsi que toute la mémoire qui les imprègne. Cependant, ils ont adopté une partie de la culture des envahisseurs, la religion, qu’ils invoquent pour expliquer pourquoi certaines personnes possèdent tant et exploitent les autres jusqu’à la mort. Cette conviction de l’existence du diable, ou d’un mal surhumain qui aide les colonisateurs, est ce qui les pousse à continuer de se battre, ce qui révèle la beauté et l’intelligence de ce peuple.</p>
+
+      <p>Je pense que cette explication révèle une terrible vérité : même si ces personnes qui exercent une domination oppressive sur les autres n’ont pas signé de pacte avec le diable, elles ont bel et bien développé une méchanceté intériorisée qui les pousse à agir avec une cruauté extrême envers les plus faibles.</p>
+
+      <p>La figure du diable vous absorbe chaque fois qu’elle apparaît à l’écran, créant une tension et un malaise dans la salle en présence d’un être qui n’est ni humain ni monstre. Ce malaise s’intensifie encore lorsqu’on voit le personnage de l’homme d’affaires s’approcher du diable sans hésitation, ce qui fait que, d’une certaine manière, l’identité du diable et celle de l’homme d’affaires se confondent, presque comme s’ils ne faisaient qu’un.</p>
+
+      <p>De plus, cette lutte qui a eu lieu dans les années 1970 et 1980 demeure extrêmement pertinente aujourd’hui en lien avec les dynamiques coloniales qui persistent dans de nombreux pays du monde, où les étrangers contrôlent la terre pour exploiter les populations autochtones. C’est un documentaire qui est et restera très pertinent pour donner une voix à cette partie de la population qui résiste et se bat pour récupérer sa terre, sa mémoire et son avenir.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Les Petits Courts — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      burger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

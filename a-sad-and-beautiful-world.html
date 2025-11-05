@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Sad and Beautiful World – Tifenn Trévinal</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">Les Petits Courts</a></div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Asso</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="fifib.html">Recap FIFIB</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section class="review-detail">
+      <h1>A Sad and Beautiful World</h1>
+      <p class="auteur">par Tifenn Trévinal</p>
+      <img class="poster" src="https://a.ltrbxd.com/resized/film-poster/1/2/6/3/2/4/9/1263249-a-sad-and-beautiful-world-0-230-0-345-crop.jpg?v=2ec82446e2" alt="Affiche — A Sad and Beautiful World" />
+
+      <p>A Sad and Beautiful World est la lettre d’amour du réalisateur Cyril Aris à Beyrouth et au Liban. Cette comédie dramatique teintée d’humour dépeint avec poésie et un charme mélancolique une ville et des êtres tiraillés entre l’effervescence de la vie, la beauté de leur pays, la puissance de l’amour, et la peur persistante de la guerre et des blessures d’enfance.</p>
+
+      <p>Dès sa première scène, un long plan-séquence d’une intensité bouleversante, le film établit sa tonalité : un accouchement dans un hôpital bombardé. Cette antithèse, entre amour et destruction, irrigue tout le film. Les personnages, à la fois lumineux et meurtris, prolongent cette dualité. Nino, Libanais à l’humour tendre, a repris le restaurant familial. Témoin de la brutalité meurtrière de la guerre civile, il incarne envers et contre tout une forme d’espoir, de résilience joyeuse. Yasmina, femme d’affaires désabusée, songe à quitter un pays qu’elle croit condamné, jusqu’à ce que le hasard la ramène vers Nino, son amour d’enfance. À travers leurs retrouvailles, Cyril Aris explore avec finesse la nostalgie, le poids du passé et la possibilité d’une réconciliation avec soi-même et son histoire.</p>
+
+      <p>Les allers-retours entre présent et souvenirs confèrent au récit une profondeur émotionnelle rare, rendant chaque regard, chaque silence, chaque musique, porteur d’une mémoire collective.</p>
+
+      <p>Grâce à ses personnages vibrants et des plans captivants, le réalisateur libanais a décroché le prix du public du 82ème festival du film de Venise, pour ce qui constitue son premier long-métrage.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Les Petits Courts — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      burger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
