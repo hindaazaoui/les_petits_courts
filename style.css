@@ -325,16 +325,18 @@ html {
   overflow: hidden;
   max-width: 900px;
   margin: 1rem auto;
+  text-align: center; /* Add this line */
 }
 
 /* Poster toujours visible */
 .poster {
   display: block;
   width: var(--poster-width);
+  max-width: 400px; /* Add this line to control maximum width */
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto; /* Center the image */
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
@@ -351,50 +353,38 @@ html {
 
 /* --- Desktop : image à côté du texte --- */
 @media (min-width: 768px) {
-  .review {
-    display: flex;
+  /* Pour les reviews de la page FIFIB */
+  .reviews-simple .review {
+    display: flex;       /* Flex pour aligner image à gauche et texte à droite */
     gap: var(--gap);
     padding: 1.2rem;
+    text-align: left;    /* texte à gauche du poster */
   }
 
-  .poster {
-    width: 220px; /* taille fixe pour desktop */
+  .reviews-simple .poster {
+    width: 220px;        /* largeur fixe pour posters de la page FIFIB */
     flex-shrink: 0;
-    margin-bottom: 0;
+    margin: 0;           /* plus besoin de margin auto */
   }
 
-  .content {
+  .reviews-simple .content {
     flex: 1;
   }
-}
-/* Style général du section */
-section {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #f9f9f9; /* léger gris clair */
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  max-width: 700px;
-  margin: 2rem auto;
-}
 
-/* Style du titre */
-section h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
+  /* Pour les pages de review individuelle */
+  .review-detail {
+    display: block;       /* image au centre au-dessus du texte */
+    padding: 1.2rem;
+    text-align: center;
+  }
 
-/* Style du paragraphe */
-section p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
+  .review-detail .poster {
+    width: auto;
+    max-width: 400px;
+    margin: 0 auto 1rem auto;  /* centre horizontalement */
+  }
 
-.review .poster {
-  display: block;       /* nécessaire pour que margin auto fonctionne */
-  margin: 0 auto;       /* centre horizontalement */
+  .review-detail .content {
+    width: 100%;
+  }
 }
