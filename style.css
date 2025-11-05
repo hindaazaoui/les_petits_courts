@@ -460,3 +460,9 @@ section img:hover {
     margin: 1rem auto;
   }
 }
+
+/* Liens dans les pages review-detail */
+a {
+  text-decoration: none;
+  color: inherit; /* pour garder la couleur du texte normal */
+}
